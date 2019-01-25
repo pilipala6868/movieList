@@ -1,0 +1,100 @@
+
+body {
+    letter-spacing: 1px;
+    font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+}
+
+#mainBox {
+    padding:                        40px;
+    margin-right:                   60px;
+}
+
+
+#searchTop img {
+    width:                          580px;
+    margin-top:                     120px;
+    margin-bottom:                  16px;
+    cursor:                         pointer;
+    transition:                     width 0.15s;
+}
+#searchTop img:hover {
+    width:                          640px;
+}
+
+#searchBox {
+    margin-top:                     16px;
+    margin-bottom:                  30px;
+}
+#inputDiv i {
+    font-size:                      16px;
+    color:                          #000;
+}
+#inputDiv input {
+    height:                         37px;
+    font-size:                      18px;
+}
+#search {
+    float:                          right;
+    margin-left:                    8px;
+}
+#search button {
+    width:                          42px;
+    height:                         38px;
+    font-size:                      16px;
+    color:                          #000;
+    background-color:               #fff;
+    border-radius:                  5px;
+    cursor:                         pointer;
+}
+#search i {
+    margin:                         3px 0px;
+    font-size:                      18px;
+    color:                          #000;
+}
+
+
+#notFound {
+    display:                        none;
+    width:                          300px;
+    text-align:                     center;
+    margin:                         100px auto;
+    padding:                        8px;
+    border:                         2px solid #E0E0E0;
+    border-radius:                  2px;
+    background-color:               #2b2735;
+    font-size:                      30px;
+    font-family:                    'Montserrat', sans-serif;
+    color:                          var(--mainColor);
+    box-shadow:                     0px 0.5px 1px #ddd;
+}
+
+
+#allItem {
+    margin:                         40px auto;
+}
+
+.infoBox {
+    display:                        none;
+    width:                          1000px;
+    margin:                         18px auto;
+    padding:                        20px 40px;
+    background-color:               #2b2735;
+    box-shadow:                     1px 1px 4px #4A4459;
+    cursor:                         pointer;
+    border-left:                    2px solid var(--mainColor);
+    transition:                     border-left-width 0.1s;
+}
+.infoBox:hover {
+    border-left-width:              5px;
+}
+
+.searchTitle {
+    color:                          var(--mainColor);
+    font-size:                      20px;
+    font-weight:                    bold;
+    margin-bottom:                  8px;
+}
+.searchText {
+    color:                          #fff;
+    font-size:                      15px;
+}

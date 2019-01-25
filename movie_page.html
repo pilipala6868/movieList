@@ -1,0 +1,66 @@
+
+<!--
+ *
+ * 电影详情页
+ * 
+ *
+ * @date  2018.11.23
+ * 
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>电影记录管理系统</title>
+        <link style="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/movie_page.css" />
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/movie_page.js"></script>
+    </head>
+
+    <body>
+        <div id="mainBox" v-cloak>
+            <div id="headline">
+                <img src="img/icon/movie.png" />
+                <span id="title_c">{{mInfo.name_ch}}</span>
+                <span id="stars" v-html="stars"></span>
+            </div>
+            <hr />
+
+            <img id="poster" :src="'img/poster/'+mInfo.movie_id+'.jpg'" />
+            <div id="info">
+                <div>
+                    <span class="attribute">导演： </span>
+                    <a :href="'actor_page.html?type=director&id='+mInfo.did">{{mInfo.dname_ch}}</a>
+                </div>
+                <div>
+                    <span class="attribute">主演： </span>
+                    <a :href="'actor_page.html?type=actor&id='+mInfo.a1id">{{mInfo.a1name_ch}}</a> / 
+                    <a :href="'actor_page.html?type=actor&id='+mInfo.a2id">{{mInfo.a2name_ch}}</a> / 
+                    <a :href="'actor_page.html?type=actor&id='+mInfo.a3id">{{mInfo.a3name_ch}}</a>
+                </div>
+                <div><span class="attribute">外文： </span><span>{{mInfo.name_en}}</span></div>
+                <div><span class="attribute">类型： </span><span>{{mInfo.category}}</span></div>
+                <div><span class="attribute">国家： </span><span>{{mInfo.country}}</span></div>
+                <div><span class="attribute">上映： </span><span>{{mInfo.released}}</span></div>
+                <div><span class="attribute">评分： </span><span>{{mInfo.score}}</span></div>
+            </div>
+            <div id="intro">
+                <div class="attr_head"><i class="fa fa-file-text-o"></i>剧情简介 · · · · · ·</div>
+                <div v-html="intro"></div>
+            </div>
+            <div id="comment">
+                <div class="attr_head"><i class="fa fa-commenting-o"></i>评论 · · · · · ·</div>
+                <div v-html="talk"></div>
+            </div>
+        </div>
+    </body>
+
+</html>

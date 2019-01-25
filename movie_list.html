@@ -1,0 +1,55 @@
+
+<!--
+ *
+ * 电影列表
+ * 
+ *
+ * @date  2018.11.26
+ * 
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>电影记录管理系统</title>
+        <link style="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/movie_list.css" />
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/movie_list.js"></script>
+    </head>
+
+    <body>
+        <div id="mainBox">
+            <table id='out_table' width='100%'><tr><td align='center' valign='middle'>
+                        <table id='all_movie_table'>
+                            <tr>
+                                <th class='movie_id' style="width: 52px;">ID</th>
+                                <th class='movie_name' style="width: 350px;">中文名</th>
+                                <th class='name_eng' style="width: 440px;">外文名</th>
+                                <th class='category' style="width: 180px;">类型</th>
+                                <th class='watch_date' style="width: 110px;">观看</th>
+                                <th class='score' style="width: 70px;">评分</th>
+                            </tr>
+                            <tr v-for="mItem in mItems" class='movieBox' v-cloak>
+                                <td class='movie_id'>{{mItem.record_id}}</td>
+                                <td class='movie_name'><a :href="'movie_page.html?id='+mItem.record_id" title='影片详情'>{{mItem.name_ch}} ({{mItem.released}})</a>
+                                </td>
+                                <td class='name_eng'>{{mItem.name_en}}</td>
+                                <td class='category'>{{mItem.category}}</td>
+                                <td class='watch_date'>{{mItem.watched.getMonth()+1+'-'+mItem.watched.getDate()}}</td>
+                                <td class='score'>{{mItem.score}}</td>
+                            </tr>
+                        </table>
+            </td></tr></table>
+            <div id='pages'></div>        
+        </div>
+    </body>
+
+</html>

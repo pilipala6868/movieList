@@ -1,0 +1,86 @@
+
+#mainBox {
+    text-align:                 center;
+    padding:                    30px;
+    margin:                     0px auto;
+    display:                    none;
+}
+
+
+#pages {
+    margin:                     16px 0;
+    text-align:                 left;
+}
+#pages span {
+    border:                     1px solid #fff;
+    padding:                    6px 10px;
+    font-size:                  15.5px;
+    margin-right:               8px;
+    background-color:           #2b2735;   
+}
+#pages span:hover {
+    background-color:           #4E4C54;
+    cursor:                     pointer;
+}
+#pages .invalid {
+    border-color:               #959191;
+}
+#pages .invalid i {
+    color:                      #959191;
+}
+#pages .invalid:hover {
+    background-color:           #2b2735;
+    cursor:                     default;
+}
+
+
+#paper {
+    padding:                    30px;
+    background-color:           #fff;
+}
+
+#headline { 
+    text-align:                 left;
+    margin:                     15px;
+}
+
+#headline img {
+    width:                      25px;
+    margin-right:               15px;
+    vertical-align:             middle;
+}
+
+#headline span {
+    font-family:                Cambria, Georgia, "Microsoft Jhenghei", sans-serif;
+    color:                      #000;
+    font-size:                  22px;
+    vertical-align:             middle;
+}
+
+
+#out_table {
+    width:                      auto;
+    text-align:                 left;
+    margin:                     0px auto;
+    padding:                    5px 15px;
+}
+
+#all_movie_table {
+    border-collapse:            collapse;
+    text-align:                 left;
+}
+th {
+    border-bottom:              1px solid #000;
+    color:                      #000;
+    font-size:                  18px;
+    font-weight:                normal;
+    text-align:                 center;
+    padding:                    10px 6px;
+    color:                      #000;
+}
+td {
+    padding:                    11px 5px;
+    font-size:                  18px;
+    text-align:                 center;
+    color:                      #000;
+}

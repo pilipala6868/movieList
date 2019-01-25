@@ -1,0 +1,97 @@
+
+:root {
+    --leftMargin:               15px;
+    --mainColor:                #F8D5AE;
+    --inputWidth:               170px;
+}
+
+#mainBox {
+    text-align:                 left;
+    margin:  					40px 30px;
+}
+
+
+#headline {
+    margin:                     10px 0;
+    font-size:                  24px;
+    margin-left:                var(--leftMargin);
+    color:                      var(--mainColor);
+}
+#headline i {
+    margin-right:               10px;
+    font-size:                  23px;
+    color:                      var(--mainColor);
+}
+
+hr {
+    margin:                     0px 20px 0 10px;
+}
+
+.insert_table {
+    text-align:                 right;
+    margin-left:                var(--leftMargin);
+    margin-bottom:              6px;
+    border-collapse:            separate;
+    border-spacing:             0px 25px;
+}
+.inputHead {
+    margin-right:               8px;
+}
+.inputTd {
+    text-align:                 left;
+}
+.inputText {
+    width:                      var(--inputWidth);
+    font-size:                  16px;
+    border-radius:              2px;
+    margin-right:               20px;
+}
+.inputFile {
+    width:                      var(--inputWidth);
+    font-size:                  16px;
+    border-radius:              2px;
+    color:                      #fff;
+}
+.inputIntro, .inputTalk {
+    width:                      440px;
+    height:                     150px;
+    margin-right:               30px;
+}
+
+
+.actor, .director {
+    margin-left:                var(--leftMargin);
+    color:                      var(--mainColor);
+}
+form hr {
+    margin:                     5px 20px 0 10px;
+}
+
+.actorHead, .directorHead {
+    margin-right:               8px;
+}
+.actorTd, .directorTd {
+    text-align:                 left;
+}
+.actorText, .directorText {
+    width:                      var(--inputWidth);
+    font-size:                  16px;
+    border-radius:              2px;
+    margin-right:               35px;
+}
+
+
+#form_button {
+    width:                      70px;
+    text-align:                 center;
+    margin-left:                6px;
+    padding:                    4px;
+    font-size:                  17px;
+    color:                      var(--mainBlue);
+    background-color:           #2b2735;
+    border-radius:              1px;
+    cursor:                     pointer;
+}
+#form_button:hover {
+    background-color:           #423e4b;
+}

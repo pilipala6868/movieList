@@ -1,0 +1,85 @@
+
+:root {
+    --mainColor:                #F8D5AE;
+}
+
+
+#mainBox {
+    text-align:                 center;
+    padding:                    30px;
+    margin:                     0px auto;
+}
+
+#out_table {
+    width:                      auto;
+    text-align:                 left;
+    margin:                     0px auto;
+    padding:                    5px 15px;
+}
+
+#all_movie_table {
+    border-collapse:            collapse;
+    text-align:                 left;
+    border-top:                 1px solid #fff;
+}
+th {
+    border-bottom:              1px solid #fff;
+    color:                      #F8D5AE;
+    font-size:                  18px;
+    font-weight:                normal;
+    text-align:                 left;
+    padding:                    10px 6px;
+}
+td {
+    padding:                    11px 5px;
+    font-size:                  18px;
+}
+
+.movieBox:nth-child(even) {
+    background-color:           #2b2735;
+}
+.movieBox:hover {
+    background-color:           #2a2e4b;
+}
+
+.movie_id, .score {
+    text-align:                 center;
+}
+.movie_name, .name_eng {
+    padding:                    0px 22px;
+}
+.movie_name a {
+    font-size:                  18px;
+    color:                      #fff;
+    text-decoration:            none;
+}
+.movie_name a:hover {
+    color:                      #53B5FE;
+}
+.watch_date {
+    padding:                    0px 18px;
+}
+
+
+/*页底页码*/
+#pages {
+    text-align:                 right;
+    margin-top:                 24px;
+    margin-right:               10px;
+}
+.page_num {
+    padding:                    6px 10px;       
+    margin:                     0 3px;
+    background-color:           #2b2735;   
+    font-size:                  16px;
+} 
+.page_num:hover {
+    background-color:           #4E4C54;
+}
+#page_num_now {
+    background-color:           #221d2b;
+    cursor:                     default;
+}
+#page_num_now:hover {
+    background-color:           none;
+}

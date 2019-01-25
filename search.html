@@ -1,0 +1,67 @@
+
+<!--
+ *
+ * 登录页面
+ * 
+ *
+ * @date  2018.11.28
+ * 
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>电影记录管理系统</title>
+        <link style="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/search.css" />
+        <link href='http://fonts.font.im/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/search.js"></script>
+    </head>
+
+    <body>
+        <div id="mainBox">
+            <div class="container-fluid">
+
+                <div id="searchTop" class="text-center">
+                    <a title="Get a RANDOM MOVIE!" :href="'movie_page.html?id=' + randomId">
+                        <img src="img/icon/searchTop.jpg" />
+                    </a>
+                </div>
+
+                <div class="row" id="searchBox">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div id="search">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+
+                        <div class="input-group" id="inputDiv">
+                            <span class="input-group-addon"><i class="fa fa-file-movie-o"></i></span>
+                            <input type="text" class="form-control" placeholder="搜索电影名/影人名" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id='notFound'>NOT FOUND!</div>
+
+                <div id="allItem">
+                    <div class='infoBox' v-for="r in results">
+                        <a :href="'movie_page.html?id=' + r.movie_id">
+                            <div class='searchTitle'>{{r.mname_ch}}</div>
+                            <div class='searchText'>{{r.intro}}</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+
+</html>

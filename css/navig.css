@@ -1,0 +1,55 @@
+
+#mainBox {
+	text-align: 				center;
+	margin: 					40px 0;
+}
+
+#menu {
+	width: 						180px;
+	margin: 					0 auto;
+	margin-bottom: 				14px;
+	padding-bottom: 			10px;
+	border-bottom: 				1px solid #fff;
+	font-family: 				'Montserrat', sans-serif;
+	font-size: 					25px;
+	color: 						var(--mainBlue);
+}
+
+.blockBox {
+    width:                      170px;
+    margin:                     15px auto;
+    padding: 					16px 0;
+    background-color:           #2b2735;
+    border-radius: 				2px;
+    cursor:                     pointer;
+    border: 					1px solid transparent;
+}
+.blockBox:hover {
+    background-color:           #423e4b;
+}
+.blockBox i {
+	margin-left: 				10px;
+	margin-right: 				8px;
+	font-size: 					17px;
+	vertical-align: 			middle;
+	color: 						var(--mainColor);
+}
+.blockBox span {
+	font-size: 					18px;
+    letter-spacing: 			4px;
+	margin-right: 				15px;
+	vertical-align: 			middle;
+	color: 						var(--mainColor);
+}
+.grayBox {
+    cursor:                     default;
+}
+.grayBox:hover {
+    background-color:           #2b2735;
+}
+.grayBox i {
+	color: 						#B3AFAF;
+}
+.grayBox span {
+	color: 						#B3AFAF;
+}

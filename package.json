@@ -1,0 +1,17 @@
+{
+  "name": "movielist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "pilipala6868",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "node-cmd": "^3.0.0",
+    "sworm": "^3.7.1"
+  }
+}

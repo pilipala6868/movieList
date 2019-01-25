@@ -1,0 +1,82 @@
+
+:root {
+    --leftMargin:               12px;
+    --mainColor:                #F8D5AE;
+    --mainSize:                 18px;
+}
+
+#mainBox {
+    padding:  					40px;
+}
+
+#headline {
+    margin-left:                var(--leftMargin);
+}
+#headline img {
+    width:                      30px;
+    margin-right:               6px;
+}
+#title_c {
+    font-size:                  30px;
+    margin-right:               10px;
+    vertical-align:             middle;
+    color:                      var(--mainColor);
+}
+#stars {
+    vertical-align:             sub;
+}
+#stars i {
+    width:                      22px;
+    color:                      #FCCF8B;
+}
+
+hr {
+    margin-bottom:              25px;
+}
+
+#poster {
+    width:                      160px;
+    float:                      left;
+    margin-left:                var(--leftMargin);
+    margin-right:               23px;
+}
+
+#info {
+    line-height:                34px;
+    font-size:                  var(--mainSize);
+}
+#info a {
+    color:                      #53B5FE;
+    font-size:                  var(--mainSize);
+}
+#info a:hover {
+    color:                      #8BCCFC;
+}
+.attribute {
+    color:                      var(--mainColor);
+}
+
+#intro {
+    margin-top:                 26px;                
+    margin-left:                var(--leftMargin);
+}
+#intro p {
+    text-indent:                38px;
+}
+.attr_head {
+    margin-bottom:              10px;
+    color:                      var(--mainColor);
+}
+.attr_head i {
+    font-size:                  16px;
+    margin-right:               6px;
+    color:                      var(--mainColor);
+}
+
+#comment {
+    margin-top:                 20px;                
+    margin-left:                var(--leftMargin);    
+}
+#comment p {
+    text-indent:                38px;
+}

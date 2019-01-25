@@ -1,0 +1,53 @@
+
+<!--
+ *
+ * 影人详情页
+ * 
+ *
+ * @date  2018.11.28
+ * 
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>电影记录管理系统</title>
+        <link style="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/actor_page.css" />
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/actor_page.js"></script>
+    </head>
+
+    <body>
+        <div id="mainBox" v-cloak>
+            <div id="headline">
+                <i class="fa fa-user-circle-o"></i>
+                <span id="name_ch">{{actorInfo.name_ch}}</span>
+                <span id="name_en">{{actorInfo.name_en}}</span>
+                <i :class="'fa fa-'+genderFa"></i>
+            </div>
+            <hr />
+
+            <div id="items">
+                <a :href="'movie_page.html?from=actorPage&id=' + mBlock.movie_id" v-for="mBlock in mBlocks">
+                    <div class="movieBlock">
+                        <img :src="'img/poster/' + mBlock.movie_id + '.jpg'">
+                        <div class="rightBlock">
+                            <div class="name_ch">{{mBlock.mname_ch}}</div>
+                            <div class="name_en">{{mBlock.mname_en}}&nbsp;</div>  <!--防止英文名空时布局错乱-->
+                            <div class="category">{{mBlock.category}}</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </body>
+
+</html>

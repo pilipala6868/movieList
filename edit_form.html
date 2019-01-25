@@ -1,0 +1,118 @@
+
+<!--
+ *
+ * 插入记录
+ * 
+ *
+ * @date  2018.11.28
+ * 
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>电影记录管理系统</title>
+        <link style="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/edit_form.css" />
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/edit_form.js"></script>
+    </head>
+
+    <body>
+        <div id="mainBox">
+            <div id="headline"><i class="fa fa-paperclip"></i>电影录入<span id="editOK">修改成功！</span></div>
+            <hr />
+            <form id="insertForm" name="insertForm" enctype="multipart/form-data" method="post">
+                <table class="insert_table" v-cloak>
+                    <tr>
+                        <td><span class='inputHead'>中文名</span></td>
+                        <td class="inputTd"><input type="text" v-model="mname_ch" class="inputText" @change="edit(0)" /></td>
+                        <td><span class='inputHead'>英文名</span></td>
+                        <td class="inputTd"><input type="text" v-model="mname_en" class="inputText" @change="edit(1)" /></td>
+                        <td><span class='inputHead'>上映</span></td>
+                        <td class="inputTd"><input type="text" v-model="released" class="inputText" @change="edit(2)" /></td>
+                        <td><span class='inputHead'>海报</span></td>
+                        <td class="inputTd"><input type="file" class="inputFile" @change="editFile()" /></td>
+                    </tr>
+                    <tr>
+                        <td><span class='inputHead'>类别</span></td>
+                        <td class="inputTd"><input type="text" v-model="category" class="inputText" @change="edit(3)" /></td>
+                        <td><span class='inputHead'>国家</span></td>
+                        <td class="inputTd"><input type="text" v-model="country" class="inputText" @change="edit(4)" /></td>
+                        <td><span class='inputHead'>观看</span></td>
+                        <td class="inputTd"><input type="text" v-model="watched" class="inputText" @change="edit(6)" /></td>
+                        <td><span class='inputHead'>评分</span></td>
+                        <td class="inputTd"><input type="text" v-model="score" class="inputText" @change="edit(7)" /></td>
+                    </tr>
+                    <tr>
+                        <td><span class='inputHead'>简介</span></td>
+                        <td colspan='3' class="inputTd"><textarea v-model="intro" class="inputIntro" @change="edit(5)"></textarea></td>
+                        <td><span class='inputHead'>短评</span></td>
+                        <td colspan='3' class="inputTd"><textarea v-model="talk" class="inputTalk" @change="edit(8)"></textarea></td>
+                    </tr>
+                </table>
+
+                <div class="director">导演</div>
+                <hr />
+                <table class="insert_table">
+                    <tr>
+                        <td><span class='directorHead'>中文名</span></td>
+                        <td class="directorTd"><input type="text" v-model="dname_ch" class="directorText" @change="edit(9)" /></td>
+                        <td><span class='directorHead'>英文名</span></td>
+                        <td class="directorTd"><input type="text" v-model="dname_en" class="directorText" @change="edit(10)" /></td>
+                        <td><span class='directorHead'>性别</span></td>
+                        <td class="directorTd"><input type="text" v-model="dsex" class="directorText" @change="edit(11)" /></td>
+                        <td><span class='directorHead'>国籍</span></td>
+                        <td class="directorTd"><input type="text" v-model="dnative" class="directorText" @change="edit(12)" /></td>
+                    </tr>
+                </table>
+
+                <div class="actor">演员</div>
+                <hr />
+                <table class="insert_table">
+                    <tr>
+                        <td><span class='actorHead'>中文名</span></td>
+                        <td class="actorTd"><input type="text" v-model="a1name_ch" class="actorText" @change="edit(13)" /></td>
+                        <td><span class='actorHead'>英文名</span></td>
+                        <td class="actorTd"><input type="text" v-model="a1name_en" class="actorText" @change="edit(14)" /></td>
+                        <td><span class='actorHead'>性别</span></td>
+                        <td class="actorTd"><input type="text" v-model="a1sex" class="actorText" @change="edit(15)" /></td>
+                        <td><span class='actorHead'>国籍</span></td>
+                        <td class="actorTd"><input type="text" v-model="a1native" class="actorText" @change="edit(16)" /></td>
+                    </tr>
+                    <tr>
+                        <td><span class='actorHead'>中文名</span></td>
+                        <td class="actorTd"><input type="text" v-model="a2name_ch" class="actorText" @change="edit(17)" /></td>
+                        <td><span class='actorHead'>英文名</span></td>
+                        <td class="actorTd"><input type="text" v-model="a2name_en" class="actorText" @change="edit(18)" /></td>
+                        <td><span class='actorHead'>性别</span></td>
+                        <td class="actorTd"><input type="text" v-model="a2sex" class="actorText" @change="edit(19)" /></td>
+                        <td><span class='actorHead'>国籍</span></td>
+                        <td class="actorTd"><input type="text" v-model="a2native" class="actorText" @change="edit(20)" /></td>
+                    </tr>
+                    <tr>
+                        <td><span class='actorHead'>中文名</span></td>
+                        <td class="actorTd"><input type="text" v-model="a3name_ch" class="actorText" @change="edit(21)" /></td>
+                        <td><span class='actorHead'>英文名</span></td>
+                        <td class="actorTd"><input type="text" v-model="a3name_en" class="actorText" @change="edit(22)" /></td>
+                        <td><span class='actorHead'>性别</span></td>
+                        <td class="actorTd"><input type="text" v-model="a3sex" class="actorText" @change="edit(23)" /></td>
+                        <td><span class='actorHead'>国籍</span></td>
+                        <td class="actorTd"><input type="text" v-model="a3native" class="actorText" @change="edit(24)" /></td>
+
+                        <td class="submitBt"><div id="form_button">完 成</div></td>
+                    </tr>
+                </table>
+            </form>
+            
+        </div>
+    </body>
+
+</html>

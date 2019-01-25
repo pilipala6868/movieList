@@ -1,0 +1,60 @@
+
+<!--
+ *
+ * 登录页面
+ * 
+ *
+ * @date  2018.11.13
+ * 
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>电影记录管理系统</title>
+        <link style="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/login.css" />
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/login.js"></script>
+    </head>
+
+    <body>
+        <div id="mainBox">
+
+            <form id="LoginForm" name="LoginForm" enctype="multipart/form-data" method="post">
+            	<div id="table_headline">管 理 员 登 录</div>
+                <table width="100%"><tr><td align="center" valign="middle">
+                    <table id="login_table">
+                        <tr>
+                        	 <div class="input-group">
+					            <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+					            <input type="text" name="username" class="form-control loginInput" placeholder="用户名" />
+					        </div>
+                        <tr/>
+                        <tr>
+                        	 <div class="input-group">
+					            <span class="input-group-addon"><i class="fa fa-key"></i></span>
+					            <input type="password" name="password" class="form-control loginInput" placeholder="密码" />
+					        </div>
+                        <tr/>
+                    </table>
+                </td></tr></table>
+
+                <div id="form_button">
+                    <button onclick="javascript:loginClick(); return false;">登 录</button>
+                    <button onclick="javascript:touristClick(); return false;">游 客</button>
+                </div>
+            </form>
+            
+        </div>
+    </body>
+
+</html>

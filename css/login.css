@@ -1,0 +1,71 @@
+
+/*登录成功成功*/
+/*.submit_word {
+    font-size:                  20px;
+}
+.submit_word a {
+    color:                      #39f;
+    font-size:                  20px;
+}
+#welcomedog {
+    width:                      35px;
+    vertical-align:             middle;
+    margin-bottom:              8px;
+}*/
+
+
+body {
+    background-image:           url(../img/bg/1.jpg);
+}
+
+
+#mainBox {
+    display:                    none;
+    width:                      500px;
+    margin:   				    200px auto;
+    padding:  					30px 0 25px 0;
+}
+
+
+#table_headline {
+    width:                      400px;
+    margin:                     0 auto;
+    margin-bottom:              5px;
+    padding:                    8px 0;
+    font-size:                  21px;
+    text-align:                 center;
+    background-color:           #2c2735;
+    border-radius:              10px 10px 0 0;
+}
+
+#login_table {
+    text-align:                 left;
+}
+.input-group {
+    width:                      400px;
+    margin:                     16px;
+}
+.input-group i {
+    color:                      #221d2b;
+    font-size:                  16px;
+}
+.input-group input {
+    font-size:                  16px;
+}
+
+#form_button {
+    text-align:                 center;
+}
+#form_button button {
+    width:                      192px;
+    margin:                     5px;
+    padding:                    6px;
+    font-size:                  16px;
+    color:                      #000;
+    background-color:           #fff;
+    border-radius:              5px;
+    cursor:                     pointer;
+}
+#form_button button:hover {
+    background-color:           #e6e6e6;
+}

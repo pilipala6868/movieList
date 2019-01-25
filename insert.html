@@ -1,0 +1,118 @@
+
+<!--
+ *
+ * 插入记录
+ * 
+ *
+ * @date  2018.11.28
+ * 
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>电影记录管理系统</title>
+        <link style="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/insert.css" />
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/insert.js"></script>
+    </head>
+
+    <body>
+        <div id="mainBox">
+            <div id="headline"><i class="fa fa-paperclip"></i>电影录入</div>
+            <hr />
+            <form id="insertForm" name="insertForm" enctype="multipart/form-data" method="post">
+                <table class="insert_table">
+                    <tr>
+                        <td><span class='inputHead'>中文名</span></td>
+                        <td class="inputTd"><input type="text" name="mname_ch" class="inputText"></td>
+                        <td><span class='inputHead'>英文名</span></td>
+                        <td class="inputTd"><input type="text" name="mname_en" class="inputText"></td>
+                        <td><span class='inputHead'>上映</span></td>
+                        <td class="inputTd"><input type="text" name="released" class="inputText"></td>
+                        <td><span class='inputHead'>海报</span></td>
+                        <td class="inputTd"><input type="file" name="poster" class="inputFile"></td>
+                    </tr>
+                    <tr>
+                        <td><span class='inputHead'>类别</span></td>
+                        <td class="inputTd"><input type="text" name="category" class="inputText"></td>
+                        <td><span class='inputHead'>国家</span></td>
+                        <td class="inputTd"><input type="text" name="country" class="inputText"></td>
+                        <td><span class='inputHead'>观看</span></td>
+                        <td class="inputTd"><input type="text" name="watched" class="inputText"></td>
+                        <td><span class='inputHead'>评分</span></td>
+                        <td class="inputTd"><input type="text" name="score" class="inputText"></td>
+                    </tr>
+                    <tr>
+                        <td><span class='inputHead'>简介</span></td>
+                        <td colspan='3' class="inputTd"><textarea name="intro" class="inputIntro"></textarea></td>
+                        <td><span class='inputHead'>短评</span></td>
+                        <td colspan='3' class="inputTd"><textarea name="talk" class="inputTalk"></textarea></td>
+                    </tr>
+                </table>
+
+                <div class="director">导演</div>
+                <hr />
+                <table class="insert_table">
+                    <tr>
+                        <td><span class='directorHead'>中文名</span></td>
+                        <td class="directorTd"><input type="text" name="dname_ch" class="directorText"></td>
+                        <td><span class='directorHead'>英文名</span></td>
+                        <td class="directorTd"><input type="text" name="dname_en" class="directorText"></td>
+                        <td><span class='directorHead'>性别</span></td>
+                        <td class="directorTd"><input type="text" name="dsex" class="directorText"></td>
+                        <td><span class='directorHead'>国籍</span></td>
+                        <td class="directorTd"><input type="text" name="dnative" class="directorText"></td>
+                    </tr>
+                </table>
+
+                <div class="actor">演员</div>
+                <hr />
+                <table class="insert_table">
+                    <tr>
+                        <td><span class='actorHead'>中文名</span></td>
+                        <td class="actorTd"><input type="text" name="a1name_ch" class="actorText"></td>
+                        <td><span class='actorHead'>英文名</span></td>
+                        <td class="actorTd"><input type="text" name="a1name_en" class="actorText"></td>
+                        <td><span class='actorHead'>性别</span></td>
+                        <td class="actorTd"><input type="text" name="a1sex" class="actorText"></td>
+                        <td><span class='actorHead'>国籍</span></td>
+                        <td class="actorTd"><input type="text" name="a1native" class="actorText"></td>
+                    </tr>
+                    <tr>
+                        <td><span class='actorHead'>中文名</span></td>
+                        <td class="actorTd"><input type="text" name="a2name_ch" class="actorText"></td>
+                        <td><span class='actorHead'>英文名</span></td>
+                        <td class="actorTd"><input type="text" name="a2name_en" class="actorText"></td>
+                        <td><span class='actorHead'>性别</span></td>
+                        <td class="actorTd"><input type="text" name="a2sex" class="actorText"></td>
+                        <td><span class='actorHead'>国籍</span></td>
+                        <td class="actorTd"><input type="text" name="a2native" class="actorText"></td>
+                    </tr>
+                    <tr>
+                        <td><span class='actorHead'>中文名</span></td>
+                        <td class="actorTd"><input type="text" name="a3name_ch" class="actorText"></td>
+                        <td><span class='actorHead'>英文名</span></td>
+                        <td class="actorTd"><input type="text" name="a3name_en" class="actorText"></td>
+                        <td><span class='actorHead'>性别</span></td>
+                        <td class="actorTd"><input type="text" name="a3sex" class="actorText"></td>
+                        <td><span class='actorHead'>国籍</span></td>
+                        <td class="actorTd"><input type="text" name="a3native" class="actorText"></td>
+
+                        <td class="submitBt"><div id="form_button">提 交</div></td>
+                    </tr>
+                </table>
+            </form>
+            
+        </div>
+    </body>
+
+</html>

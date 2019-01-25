@@ -1,0 +1,82 @@
+
+:root {
+    --leftMargin:               12px;
+    --mainColor:                #F8D5AE;
+    --mainSize:                 18px;
+}
+
+#mainBox {
+    padding:  					40px;
+    font-size:                  19px;
+}
+
+#headline {
+    margin-left:                var(--leftMargin);
+}
+#headline i:first-child {
+    font-size:                  26px;
+    margin-right:               10px;
+    color:                      #f4d1aa;
+    vertical-align:             middle;
+}
+#name_ch {
+    font-size:                  26px;
+    margin-right:               10px;
+    color:                      var(--mainColor);
+    vertical-align:             middle;
+}
+#name_en {
+    font-size:                  21px;
+    color:                      var(--mainColor);
+    vertical-align:             sub;
+}
+#headline i:last-child {
+    font-size:                  14px;
+    margin-right:               10px;
+    color:                      #f4d1aa;
+    vertical-align:             middle;
+}
+
+hr {
+    margin:                     15px 0 15px 0;
+}
+
+
+.movieBlock {
+    width:                      45%;
+    display:                    inline-block;
+    margin:                     10px 15px 12px 10px;
+    background-color:           #2b2735;
+    cursor:                     pointer;
+}
+.movieBlock:hover {
+    background-color:           #423e4b;
+}
+.movieBlock img {
+    width:                      100px;
+    height:                     145px;
+    float:                      left;
+    margin:                     15px 20px;
+    margin-right:               30px;
+}
+.rightBlock {
+    position:                   relative;
+    margin:                     30px;
+    margin-bottom:              20px;
+    height:                     130px;
+}
+.name_ch {
+    font-size:                  22px;   
+    color:                      #f4d1aa;
+}
+.name_en {
+    font-size:                  16px;    
+    text-indent:                1.5px;
+    word-wrap:                  break-word;
+}
+.category {
+    position:                   absolute;
+    font-size:                  19px;   
+    right:                      10px;
+    bottom:                     0px;
+}

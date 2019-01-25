@@ -1,0 +1,21 @@
+
+body {
+    background-color:           #19131f;
+}
+
+#leftFrame {
+	width:          			13%;
+	height:             		800px;
+    border:          		    0;
+    margin:          		    1.5%;
+    margin-right:            	0;
+}
+
+#rightFrame {
+	float:          			right;
+	width:          			83%;
+	height:             		800px;
+    border:          		    0; 
+    margin:          		    1.5%;
+    margin-left:             	0;
+}

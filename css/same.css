@@ -1,0 +1,43 @@
+
+:root {
+    --mainColor:                #F8D5AE;
+    --mainBlue:                 #53B5FE;
+}
+
+* {
+    margin:                     0; 
+    padding:                    0;
+    font-size:                  18px;
+    color:                      #fff;
+    font-family:                Cambria, Georgia, "Microsoft Jhenghei", sans-serif;
+} 
+
+body {
+    background-attachment:      fixed;
+    background-size:            100%;
+    background-repeat:          none;
+    background-color:           #221d2b;
+    letter-spacing:             1px;
+}
+
+a { 
+    cursor:                     pointer;
+    font-size:                  18px;
+    text-decoration:            none;
+}
+a:hover {
+    text-decoration:            none;
+}
+
+button:active {
+    outline:                    none;
+}
+
+input, textarea {
+    color:                      #000;
+    resize:                     none;
+}
+
+[v-cloak] {  /*用于vue-js渲染完成前的隐藏*/
+    display:                    none;
+}

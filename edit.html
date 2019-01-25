@@ -1,0 +1,57 @@
+
+<!--
+ *
+ * 修改电影数据
+ * 
+ *
+ * @date  2018.11.26
+ * 
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>电影记录管理系统</title>
+        <link style="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/edit.css" />
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/edit.js"></script>
+    </head>
+
+    <body>
+        <div id="mainBox">
+            <div id="searchBox" class="input-group">
+                <input type="text" class="form-control" placeholder="输入电影名" />
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            </div>
+            <table id='out_table' width='100%'><tr><td align='center' valign='middle'>
+                        <table id='all_movie_table'>
+                            <tr class='movieBox' v-for="mItem in mItems" v-cloak>
+                                <td class='movie_id'>{{mItem.record_id}}</td>
+                                <td class='movie_name'>{{mItem.name_ch}} ({{mItem.released}})</td>
+                                <td class='name_eng'>{{mItem.name_en}}</td>
+                                <td class='watch_date'>{{mItem.watched.getMonth()+1+'-'+mItem.watched.getDate()}}</td>
+                                <td class='score'>{{mItem.score}}</td>
+                                <td class='editBt'>
+                                    <a :href="'edit_form.html?mid='+mItem.movie_id+'&rid='+mItem.record_id+'&did='+mItem.director_id+'&a1id='+mItem.actor1_id+'&a2id='+mItem.actor2_id+'&a3id='+mItem.actor3_id" title="修改">
+                                        <i class='fa fa-edit'></i>
+                                    </a>
+                                </td>
+                                <td class='deleteBt'>
+                                    <a title="删除" :href="'javascript: deleteClick('+mItem.movie_id+','+mItem.record_id+','+mItem.director_id+','+mItem.actor1_id+','+mItem.actor2_id+','+mItem.actor3_id+');'"><i class='fa fa-trash-o'></i></a>
+                                </td>
+                            </tr>
+                        </table>
+            </td></tr></table>
+            <div id='pages'></div>
+        </div>
+    </body>
+
+</html>
